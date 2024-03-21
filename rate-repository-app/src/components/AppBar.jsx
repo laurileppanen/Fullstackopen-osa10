@@ -12,6 +12,7 @@ const styles = StyleSheet.create({
   textStyle: {
     fontSize: theme.fontSizes.appBar,
     color: "#FFFFFF",
+    marginLeft: 10,
   },
 });
 
