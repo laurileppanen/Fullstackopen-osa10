@@ -49,6 +49,29 @@ const itemStyles = StyleSheet.create({
   },
 });
 
+const formatCount = (count) => {
+  const thousands = count / 1000;
+  const kokonaisluku = Math.floor(thousands);
+  const tuhannet = kokonaisluku * 1000;
+
+  if (count > 1000) {
+    if (
+      (count > tuhannet && count - tuhannet < 50) ||
+      (tuhannet > count && tuhannet - count < 50)
+    ) {
+      return `${kokonaisluku}k`;
+    } else {
+      return `${thousands.toFixed(1)}k`;
+    }
+  }
+
+  if (count < 1000 && 1000 - count < 50) {
+    return "1k";
+  } else {
+    return count;
+  }
+};
+
 const Item = ({
   fullName,
   description,
@@ -76,11 +99,11 @@ const Item = ({
     </View>
     <View style={itemStyles.downContainer}>
       <View style={itemStyles.downTextContainer}>
-        <Text style={itemStyles.numberContainer}>{stars}</Text>
+        <Text style={itemStyles.numberContainer}>{formatCount(stars)}</Text>
         <Text>Stars</Text>
       </View>
       <View style={itemStyles.downTextContainer}>
-        <Text style={itemStyles.numberContainer}>{forks}</Text>
+        <Text style={itemStyles.numberContainer}>{formatCount(forks)}</Text>
         <Text>Forks</Text>
       </View>
       <View style={itemStyles.downTextContainer}>
