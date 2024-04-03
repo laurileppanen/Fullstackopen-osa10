@@ -108,7 +108,7 @@ const Item = ({
       </View>
       <View style={itemStyles.downTextContainer}>
         <Text style={itemStyles.numberContainer}>{reviews}</Text>
-        <Text>Reviews</Text>
+        <Text>Reviews </Text>
       </View>
       <View style={itemStyles.downTextContainer}>
         <Text style={itemStyles.numberContainer}>{rating}</Text>

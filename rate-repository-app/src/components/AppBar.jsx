@@ -15,6 +15,7 @@ const styles = StyleSheet.create({
     fontSize: theme.fontSizes.appBar,
     color: "#FFFFFF",
     marginLeft: 10,
+    paddingHorizontal: 10,
   },
 });
 
