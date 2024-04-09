@@ -7,7 +7,6 @@ import createApolloClient from "./src/utils/apolloClient";
 const apolloClient = createApolloClient();
 
 const App = () => {
-  console.log("moi");
   return (
     <NativeRouter>
       <ApolloProvider client={apolloClient}>
