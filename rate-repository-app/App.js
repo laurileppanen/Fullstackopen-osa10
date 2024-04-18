@@ -6,9 +6,10 @@ import Main from "./src/components/Main";
 import createApolloClient from "./src/utils/apolloClient";
 
 const apolloClient = createApolloClient();
+console.log("CLIENT:", apolloClient);
 
 const App = () => {
-  console.log("KONSTA", Constants.expoConfig);
+  console.log("KONSTA", Constants.expoConfig.extra.apolloUri);
 
   return (
     <NativeRouter>
