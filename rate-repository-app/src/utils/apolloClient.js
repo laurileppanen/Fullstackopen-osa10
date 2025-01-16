@@ -1,10 +1,9 @@
-import { ApolloClient, InMemoryCache } from "@apollo/client";
-import Constants from "expo-constants";
+import { ApolloClient, InMemoryCache } from '@apollo/client';
+
 
 const createApolloClient = () => {
-  console.log("KONSTA:", Constants.expoConfig.extra.apolloUri);
   return new ApolloClient({
-    uri: Constants.expoConfig.extra.apolloUri,
+    uri: 'http://130.232.227.235:4000/graphql',
     cache: new InMemoryCache(),
   });
 };
