@@ -28,7 +28,8 @@ import 'dotenv/config'
       favicon: "./assets/favicon.png"
     },
     extra: {
-      env: process.env.ENV
+      env: process.env.ENV,
+      apolloUri: process.env.APOLLO_URI 
     }
   }
 
