@@ -1,7 +1,11 @@
 import { useMutation } from "@apollo/client";
-import { SIGNIN } from "../graphql/queries";
+import { SIGNIN } from "../graphql/mutations";
+import AuthStorageContext from "../contexts/AuthStorageContext";
+import useAuthStorage from "./useAuthStorage";
+
 
 const useSignIn = () => {
+  const authStorage = useAuthStorage()
   const [mutate, result] = useMutation(SIGNIN);
 
   const signIn = async ({ username, password }) => {
